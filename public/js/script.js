@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const userData = {
-            nome: form.nome.value,
+            nome: form.name.value,
             email: form.email.value,
             senha: form.senha.value
         };

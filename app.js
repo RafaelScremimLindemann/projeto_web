@@ -19,3 +19,7 @@ app.listen(PORT, () => {
 
 //sempre acessar a pasta (cd) onde está o projeto para executá-lo
 //ou botao direito no projeto open in integrated terminal
+/*  - git status
+    - git add .
+    - 
+*/

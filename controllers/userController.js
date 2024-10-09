@@ -15,6 +15,7 @@ const bcrypt = require('bcrypt');
 // Criar um novo usuário
 exports.createUser = async (req, res) => {
     const { nome, email, senha } = req.body;
+    
     try {
         const hashedPassword = await bcrypt.hash(senha,10);
         const result = await db.query('INSERT INTO users (nome, email, senha) VALUES (?, ?, ?)', [nome, email, hashedPassword]);
