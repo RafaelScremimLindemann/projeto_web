@@ -1,18 +1,32 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 require('dotenv').config();
+const loginController = require('./controllers/loginController');
 
 // Servir arquivos estáticos da pasta "public"
 app.use(express.static('public'));
 
 // Middleware para interpretar JSON no corpo das requisições
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-// Rotas (adicione suas rotas aqui)
-app.use('/users', require('./routes/users'));
+//importando a função renderLoginPage.
+const {renderLoginPage} = require('./controllers/loginController');
+
+//Usado para lidar com solicitações GET feitas a uma URL específica do servidor. 
+//Essas solicitações são normalmente usadas para obter dados de um servidor.
+//Quando o / for chamado no navegador chama o renderLoginPage.
+app.get('/', (req, res) => {
+    renderLoginPage(req,res);
+});
+
+app.post('/login', loginController.validaLogin);
+
 
 // Iniciar o servidor
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
@@ -21,5 +35,6 @@ app.listen(PORT, () => {
 //ou botao direito no projeto open in integrated terminal
 /*  - git status
     - git add .
-    - 
+    - git commit -m "Correção erro de banco"
+    - git push origin main
 */
