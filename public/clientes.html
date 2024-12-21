@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css"  href="css/clientes.css" />
+    </head>
+<body>
+    <header class="header-horizontal">
+        <nav class="menu-horizontal">
+            <img id="img-logo" src="logo_RafaelScremim.jpg" alt="logo">
+            <label>Bem-vindo!</label>
+            <button id="sair-menu-horizontal">Sair</button>
+        </nav>
+    <form id="clientes_form" action="/clientes" method="POST">
+    <h1> Pesquise o Cliente </h1>
+    <label for="clientes">Clientes:</label>
+        <input type="text" id="clientes" name="clientes" required><br><br>
+        <button type="busca_clientes">Buscar</button>
+    </form>
+    <div id="clientes-screen" class="screen hidden">
+        <form id="cad_clientes_form">
+        <h1>Cadastro de Clientes</h1>
+        <div>
+            <input type="text" id="razaoCliente" placeholder="Razão Social">
+            <input type="text" id="cnpjCliente" placeholder="CNPJ/CPF">
+        </div>
+        <div>
+            <input type="text" id="inscricaoCliente" placeholder="Insc. Estadual">
+            <input type="text" id="nomeFantasiaCliente" placeholder="Nome Fantasia">
+        </div>
+        <div>
+            <input type="text" id="cepCliente" placeholder="CEP">
+            <input type="text" id="estadoCliente" placeholder="Estado">
+            <input type="text" id="cidadeCliente" placeholder="Cidade">
+            <input type="text" id="bairroCliente" placeholder="Bairro">
+            <input type="text" id="numeroCliente" placeholder="Numero">
+        </div>
+        <div>
+            <input type="text" id="contato1Cliente" placeholder="Contato 1">
+            <input type="text" id="contato2Cliente" placeholder="Contato 2">
+            <input type="text" id="emailCliente" placeholder="E-mail">
+            <input type="text" id="observacaoCliente" placeholder="Observação">
+        </div>
+        <button type="submit">Salvar</button>
+        <button id="back-btn">Voltar</button>
+        </form>
+        <script src= "js/scriptClientes.js"></script>
+</body>
+</html>

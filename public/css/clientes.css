@@ -1,0 +1,31 @@
+*{margin: 0; padding: 0;}
+
+body{
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+}
+
+.menu-horizontal{
+    background-color: aqua;
+    width: 100%;
+    list-style:none;
+    border:1px solid #c0c0c0;
+    float:left;
+    display: flex; /* Usando Flexbox para o layout */
+    justify-content: space-between; /* Distribui o conteúdo nas extremidades */
+    gap: 20px;
+}
+
+#sair-menu-horizontal{
+    margin-left: auto;
+    padding: 5px 10px;
+    box-sizing: border-box
+}
+
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+#img-logo {
+    width: 50px;
+    height: 60px;
+    object-fit: contain;
+  }

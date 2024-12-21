@@ -1,4 +1,6 @@
-/*Quando o usuário preenche os campos e clica no botão "Entrar":
+/*Aguarda até que o documento HTML tenha sido completamente carregado 
+e o DOM esteja pronto para ser manipulado. Isso é útil para garantir 
+que você não tente acessar ou manipular elementos que ainda não foram carregados no DOM.
 O evento de envio do formulário (submit) é capturado pelo scriptLogin.js*/
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('loginForm');

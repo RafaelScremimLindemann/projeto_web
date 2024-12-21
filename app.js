@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 require('dotenv').config();
 const loginController = require('./controllers/loginController');
+const clientesRoutes = require('./routes/clientes');
 
 // Servir arquivos estáticos da pasta "public"
 app.use(express.static('public'));
@@ -24,12 +25,14 @@ app.get('/', (req, res) => {
 
 app.post('/login', loginController.validaLogin);
 
+app.use('/', clientesRoutes);
 
 // Iniciar o servidor
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
 
 //sempre acessar a pasta (cd) onde está o projeto para executá-lo
 //ou botao direito no projeto open in integrated terminal
