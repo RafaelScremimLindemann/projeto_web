@@ -12,7 +12,9 @@ window.onload = function() {
     });
 };
 
+router.get('/menuPrincipal', renderMenuPrincipal);
+
 // Rota GET para exibir a página de menuPrincipal
-app.get('/menuPrincipal', renderMenuPrincipal);
+/*app.get('/menuPrincipal', renderMenuPrincipal);*/
 
 // Rota POST para processar o menuPrincipal

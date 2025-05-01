@@ -1,7 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #0984b4;
+    height: 70vh;
+    background-color: #0959b4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {

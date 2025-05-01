@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { renderClientes, adicionarCliente } = require('../controllers/clientesController');
+const { renderClientes, adicionarCliente, buscarCliente } = require('../controllers/clientesController');
 
 
 // Rota GET para exibir a página de login
@@ -12,5 +12,7 @@ router.get('/clientes', renderClientes);
 
 // Rota POST para processar o cliente
 router.post('/clientes', adicionarCliente);
+
+router.post("/clientes/buscar", buscarCliente);
 
 module.exports = router;

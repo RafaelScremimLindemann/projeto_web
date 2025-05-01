@@ -1,31 +1,107 @@
-*{margin: 0; padding: 0;}
-
-body{
-font-family: arial, helvetica, sans-serif;
-font-size: 12px;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.menu-horizontal{
-    background-color: aqua;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Header e Navegação */
+.header {
     width: 100%;
-    list-style:none;
-    border:1px solid #c0c0c0;
-    float:left;
-    display: flex; /* Usando Flexbox para o layout */
-    justify-content: space-between; /* Distribui o conteúdo nas extremidades */
-    gap: 20px;
+    background-color: #0959b4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-#sair-menu-horizontal{
-    margin-left: auto;
-    padding: 5px 10px;
-    box-sizing: border-box
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.menu li:hover ul, .menu li.over ul{display:block;}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-#img-logo {
-    width: 50px;
-    height: 60px;
-    object-fit: contain;
-  }
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.logo span {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid #ffffff;
+}
+
+.btn-sair {
+    padding: 0.5rem 1rem;
+    background-color: #0959b4;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-sair:hover {
+    background-color: #d9363e;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu li a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0;
+    }
+
+    .btn-sair {
+        margin-top: 1rem;
+        align-self: flex-end;
+    }
+}

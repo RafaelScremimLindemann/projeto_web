@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         // Envia os dados para o servidor
-        const response = await fetch('/login', {
+        const response = await fetch('/menuPrincipal', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(loginForm), // Converte os dados em JSON

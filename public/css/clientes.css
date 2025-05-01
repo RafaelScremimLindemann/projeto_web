@@ -1,12 +1,11 @@
 *{margin: 0; padding: 0;}
 
 body{
-font-family: arial, helvetica, sans-serif;
-font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
 }
-
 .menu-horizontal{
-    background-color: aqua;
+    background-color: #0959b4;
     width: 100%;
     list-style:none;
     border:1px solid #c0c0c0;
@@ -18,8 +17,20 @@ font-size: 12px;
 
 #sair-menu-horizontal{
     margin-left: auto;
-    padding: 5px 10px;
-    box-sizing: border-box
+    margin-right: 5px;
+    padding: 2px 10px;
+    box-sizing: border-box;
+    background-color: #0959b4;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#sair-menu-horizontal:hover{
+    background-color: #d9363e;
 }
 
 .menu li:hover ul, .menu li.over ul{display:block;}
@@ -29,3 +40,132 @@ font-size: 12px;
     height: 60px;
     object-fit: contain;
   }
+
+.logo span {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Estiliza o fundo do modal (sobrepõe o formulário) */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa interna do modal */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+/* Estiliza o botão de fechar */
+#fechar-modal {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#fechar-modal:hover {
+    background-color: #45a049;
+}
+
+/* Estiliza o botão de fechar */
+#fechar-modal-erro {
+    background-color: #b6020b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#fechar-modal-erro:hover {
+    background-color: #b6020b;
+}
+
+/* Destaca o título "Cliente" */
+.titulo-cliente {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Espaçamento interno para a tela principal */
+#clientes-screen {
+    padding: 20px;
+}
+
+/* Bordas finas ao redor de cada bloco de inputs */
+#cad_clientes_form > div {
+    border: 1px solid #d0d0d0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Espaçamento e organização dos inputs */
+#cad_clientes_form input {
+    margin: 5px;
+    padding: 8px;
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+}
+
+/* Melhor distribuição da tabela */
+#clientes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto;
+    word-wrap: break-word;
+}
+
+#clientes-table th, #clientes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+#clientes-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    #cad_clientes_form input {
+        width: 100%;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titulo-cliente {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
